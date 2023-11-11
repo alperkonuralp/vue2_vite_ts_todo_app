@@ -1,20 +1,13 @@
 <template>
   <div class="greetings">
     <h1 class="green">
-      <a
-        href="https://github.com/logue/vite-vue2-ts-starter#readme"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://github.com/logue/vite-vue2-ts-starter#readme" target="_blank" rel="noopener">
         {{ msg }}
       </a>
     </h1>
     <p>
       Build:
-      <time
-        :datetime="meta.date"
-        v-text="new Date(meta.date).toLocaleString()"
-      />
+      <time :datetime="meta.date" v-text="new Date(meta.date).toLocaleString()" />
     </p>
     <p v-if="!title">
       Please define
@@ -33,37 +26,21 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, type SetupContext } from 'vue';
-
-import type MetaInterface from '@/interfaces/MetaInterface';
+<script lang="ts" setup>
+import { defineProps, ref } from 'vue';
 
 import Meta from '@/Meta';
 
 /** HelloWorld Component */
-export default defineComponent({
-  props: {
-    /** Prop message */
-    msg: { type: String, required: true },
-  },
-  /**
-   * Setup
-   *
-   * @param _props - Props
-   * @param _context - Context
-   */
-  setup(_props, _context: SetupContext) {
-    /** Meta information */
-    const meta: MetaInterface = Meta;
-
-    const title = import.meta.env.VITE_APP_TITLE;
-
-    return {
-      meta,
-      title,
-    };
-  },
+const { msg } = defineProps({
+  /** Prop message */
+  msg: { type: String, required: true },
 });
+
+/** Meta information */
+const meta = ref(Meta);
+
+const title = ref(import.meta.env.VITE_APP_TITLE);
 </script>
 
 <style lang="scss" scoped>
@@ -80,6 +57,7 @@ h3 {
 }
 
 .greetings {
+
   h1,
   h3,
   p {
@@ -89,6 +67,7 @@ h3 {
 
 @media (min-width: 1024px) {
   .greetings {
+
     h1,
     h3,
     p {

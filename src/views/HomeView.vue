@@ -4,8 +4,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, watch, type SetupContext } from 'vue';
+<script lang="ts" setup>
+import { watch } from 'vue';
 
 // import { useStore } from '@logue/vue2-helpers/vuex';
 import { useRoute } from 'vue-router/composables';
@@ -14,37 +14,24 @@ import { useRoute } from 'vue-router/composables';
 import TheWelcome from '@/components/TheWelcome.vue';
 
 /** Home Component */
-export default defineComponent({
-  /** Components */
-  components: {
-    TheWelcome,
-  },
-  /**
-   * Setup
-   *
-   * @param _props - Props
-   * @param _context - Context
-   */
-  setup(_props, _context: SetupContext) {
-    /** Route */
-    const route = useRoute();
-    /** Vuex */
-    // const store = useStore();
+/** Route */
+const route = useRoute();
+/** Vuex */
+// const store = useStore();
 
-    /* *
-     * Computed
-     * /
-    const computedValue: Ref<string> = computed({
-      get: () => store.getters.computedValue,
-      set: v => store.dispatch('setComputedValue', v)
-    }
-     */
+/* *
+ * Computed
+ * /
+const computedValue: Ref<string> = computed({
+  get: () => store.getters.computedValue,
+  set: v => store.dispatch('setComputedValue', v)
+}
+ */
+console.log('first');
 
-    // Watch
-    watch(
-      () => route?.name,
-      name => console.log('route is changed:', name)
-    );
-  },
-});
+// Watch
+watch(
+  () => route?.name,
+  name => console.log('route is changed:', name)
+);
 </script>

@@ -4,12 +4,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-/** About Component */
-export default defineComponent({});
-</script>
+<script lang="ts" setup></script>
 
 <style>
 @media (min-width: 1024px) {

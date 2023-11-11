@@ -18,11 +18,7 @@
       </template>
       <template #heading>Tooling</template>
       This project is served and bundled with
-      <a
-        href="https://vitejs.dev/guide/features.html"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">
         Vite
       </a>
       . The recommended IDE setup is
@@ -30,11 +26,7 @@
         VSCode
       </a>
       +
-      <a
-        href="https://github.com/johnsoncodehk/volar"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">
         Volar
       </a>
       <br />
@@ -62,19 +54,11 @@
         Vue Test Utils
       </a>
       , and
-      <a
-        href="https://github.com/vuejs/devtools"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">
         Vue Dev Tools
       </a>
       . If you need more resources, we suggest paying
-      <a
-        href="https://github.com/vuejs/awesome-vue"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">
         Awesome Vue
       </a>
       a visit.
@@ -85,27 +69,15 @@
         <plugin-icon />
       </template>
       <template #heading>Pre Installed Plugins</template>
-      <a
-        href="https://vitejs.dev/guide/features.html#typescript"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://vitejs.dev/guide/features.html#typescript" target="_blank" rel="noopener">
         typescript
       </a>
       ,
-      <a
-        href="https://github.com/fi3ework/vite-plugin-checker"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://github.com/fi3ework/vite-plugin-checker" target="_blank" rel="noopener">
         vite-plugin-checker
       </a>
       ,
-      <a
-        href="https://github.com/btd/rollup-plugin-visualizer"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://github.com/btd/rollup-plugin-visualizer" target="_blank" rel="noopener">
         rollup-plugin-visualizer
       </a>
       ,
@@ -126,11 +98,7 @@
         Vue Land
       </a>
       , our official Discord server, or
-      <a
-        href="https://stackoverflow.com/questions/tagged/vue.js"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener">
         StackOverflow
       </a>
       . You should also subscribe to
@@ -160,9 +128,7 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
+<script lang="ts" setup>
 import WelcomeItem from '@/components/WelcomeItem.vue';
 import CommunityIcon from '@/components/icons/IconCommunity.vue';
 import DocumentationIcon from '@/components/icons/IconDocumentation.vue';
@@ -170,16 +136,4 @@ import EcosystemIcon from '@/components/icons/IconEcosystem.vue';
 import PluginIcon from '@/components/icons/IconPlugin.vue';
 import SupportIcon from '@/components/icons/IconSupport.vue';
 import ToolingIcon from '@/components/icons/IconTooling.vue';
-
-export default defineComponent({
-  components: {
-    CommunityIcon,
-    DocumentationIcon,
-    EcosystemIcon,
-    PluginIcon,
-    SupportIcon,
-    ToolingIcon,
-    WelcomeItem,
-  },
-});
 </script>
